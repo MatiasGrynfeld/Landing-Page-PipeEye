@@ -1,0 +1,44 @@
+.caracteristicas-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.caracteristicas-content {
+    border-radius: 110px;
+    background: linear-gradient(
+        127deg, 
+        rgba(77, 81, 100, 0.37) 0%, 
+        rgba(0, 0, 0, 0.37) 83.13%
+    );
+    width: 75vw;
+    height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px 35px;
+}
+
+.caracteristicas-parte {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 25%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.caracteristicas-parte-imagen {
+    height: 100%;
+    width: 100%;
+    max-width: 25%;
+    object-fit: contain;
+}
+
+.caracteristicas-parte-texto-wrapper {
+    flex: 1;
+    font-size: 2rem;
+    font-weight: 700;
+}
