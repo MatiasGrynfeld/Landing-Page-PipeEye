@@ -1,0 +1,63 @@
+.industrias-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.industrias-title {
+    width: 100%;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-left: 1vw;
+}
+
+.industrias-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2vh 3vw;
+    gap: 3vw;
+}
+
+.industrias-card {
+    border-radius: 51px;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2vh 2vw;
+}
+
+.industrias-card-type {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+
+    margin-bottom: 3vh;
+    max-width: 20vw;
+    min-height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.industrias-card-img {
+    width: 15vw;
+    aspect-ratio: 1 / 1;
+    object-fit: cover; 
+    margin-bottom: 3vh;
+    border-radius: 50%;
+}
+
+.industrias-card-paragraph {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    max-width: 20vw;
+    min-height: 12rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
