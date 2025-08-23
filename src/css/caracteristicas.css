@@ -8,26 +8,24 @@
 
 .caracteristicas-container {
     position: relative;
-    width: 75vw;
-    height: 75vh;
+    width: 70vw;
+    height: 70vh;
     border-radius: 110px;
     background: linear-gradient(
         127deg, 
         rgba(77, 81, 100, 0.37) 0%, 
         rgba(0, 0, 0, 0.37) 83.13%
     );
-    background-size: 100% 100%;
-    background-position: left top;
 }
 
 .caracteristicas-container::before {
     content: "Datos y Caracteristicas";
     position: absolute;
-    top: -18vh;
+    top: -15vh;
     left: -6vw;
-    padding: 5% 3% 9% 3%;
+    padding: 4% 3% 8% 3%;
     border-radius: 110px;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -44,7 +42,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 10px 35px;
     background: transparent;
 }
 
@@ -54,7 +51,6 @@
     align-items: center;
     justify-content: flex-start;
     height: 25%;
-    padding: 1rem;
     box-sizing: border-box;
 }
 
@@ -67,7 +63,7 @@
 
 .caracteristicas-parte-texto-wrapper {
     flex: 1;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
