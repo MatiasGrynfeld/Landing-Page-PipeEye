@@ -3,7 +3,9 @@ import IndustriasCard from './industrias_card.jsx'
 
 export default function Industrias() {
     return <section className="industrias-wrapper">
-        <h2 className='industrias-title'>Industrias beneficiadas</h2>
+        <div className='industrias-title-container'>
+            <h2 className='industrias-title'>Industrias beneficiadas</h2>
+        </div>
         <div className="industrias-container">
             <IndustriasCard img="/resources/industrias/oil an gas 1.png" type="Sector energético, petrolífero y de gas natural">
                 Detectar fisuras en tuberías de transporte de gas, petróleo y derivados, reduciendo riesgos ambientales y costos de mantenimiento.
