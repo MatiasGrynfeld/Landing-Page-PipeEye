@@ -3,49 +3,34 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
 }
 
 .caracteristicas-container {
     position: relative;
-    width: 70vw;
-    height: 70vh;
-    border-radius: 0 110px 110px 110px;
-    background-color: rgba(0, 0, 0, 0.37);
-
+    width: 75%;
+    height: 100%;
 }
 
-.caracteristicas-container::before {
-    content: "Datos y Caracteristicas";
-    position: absolute;
-    width: auto;
-    padding: 0 5vw;
+.caracteristicas-title {
+    padding: 5vh 2vw;
+    width: fit-content;
     border-radius: 110px 110px 0 0;
-    font-size: 6vh;
+    font-size: 3rem;
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: inherit;
-    z-index: 2;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.37) 0%,
-        rgba(0, 0, 0, 0.37) 83%,
-        transparent 84%,
-        transparent 100%
-    );
+    background-color: rgba(0, 0, 0, 0.37);
 }
 
 .caracteristicas-content {
     position: relative;
+    padding: 1vh 0 3vh 3vw;
     z-index: 1;
+    gap: 0;
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 3vh 1vw;
+    border-radius: 0 110px 110px 110px;
+    background-color: rgba(0, 0, 0, 0.37);
+    gap: 1vh;
 }
 
 .caracteristicas-parte {
@@ -53,28 +38,31 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    height: 25%;
     box-sizing: border-box;
 }
 
 .caracteristicas-parte-imagen {
-    height: 100%;
-    width: 100%;
-    max-width: 25%;
+    height: 120px;
+    width: 120px;
+    min-width: 120px;
+    margin-right: 1.5rem;
     object-fit: contain;
 }
 
 .caracteristicas-parte-texto-wrapper {
     flex: 1;
-    font-size: 5vh;
+    font-size: 2.5rem;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
 .caracteristicas-button {
     z-index: 3;
     position: absolute;
     cursor: pointer;
-    right: 2.6vw;
+    right: 3vw;
     bottom: 4vh;
 
     display: flex;
@@ -82,7 +70,7 @@
     align-items: center;
 
     padding: 4vh 1.5vw;
-    font-size: 3vh;
+    font-size: 1.5rem;
     font-weight: 700;
     border-radius: 72px;
     background-color:#007BFF;
