@@ -1,4 +1,4 @@
-import './css/caracteristicas.css';
+import '../css/caracteristicas.css';
 import CaracteristicasParte from './caracteristicas_parte.jsx';
 
 export default function Caracteristicas() {

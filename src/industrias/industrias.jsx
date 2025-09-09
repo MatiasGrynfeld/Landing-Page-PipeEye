@@ -1,4 +1,4 @@
-import './css/industrias.css'
+import '../css/industrias.css'
 import IndustriasCard from './industrias_card.jsx'
 
 export default function Industrias() {
