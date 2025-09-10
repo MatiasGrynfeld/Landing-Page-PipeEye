@@ -1,0 +1,17 @@
+[
+    {
+        "tipo": "Fisura",
+        "xy" : [245, 180],
+        "confianza" : 0.94
+    },
+    {
+        "tipo": "Falla",
+        "xy" : [420, 220],
+        "confianza" : 0.81
+    },
+    {
+        "tipo": "Rotura",
+        "xy" : [180, 160],
+        "confianza" : 0.90
+    }
+]

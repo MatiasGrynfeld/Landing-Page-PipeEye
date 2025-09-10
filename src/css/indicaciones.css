@@ -1,0 +1,124 @@
+.indicaciones-wrapper{
+    height: 100vh;
+}
+
+.indicaciones-title{
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-left: 3vw;
+}
+
+.indicaciones-defectos-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.indicaciones-subtitulo{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-left: 3vw;
+}
+
+.indicaciones-defectos-content{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 0 1vw;
+    padding: 0 2vw;
+}
+
+.indicaciones-defectos{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 18px 27px 10.7px 0 rgba(0, 0, 0, 0.25);
+    background: rgba(193, 160, 160, 0.08);
+    border-radius: 51px;
+    table-layout: fixed;
+}
+
+.indicaciones-defectos-header > th,
+.indicaciones-defectos-body > td {
+    width: 50%;
+}
+
+.indicaciones-defectos-header{
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.indicaciones-defectos-body{
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.indicaciones-defectos td, .indicaciones-defectos th {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.indicaciones-defectos tbody tr:not(:last-child) {
+    position: relative;
+}
+
+.indicaciones-defectos tbody tr:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 2vw;
+    right: 2vw;
+    height: 0.617px;
+    background-color: rgba(87, 86, 86, 0.40);
+}
+
+.indicaciones-confianza-cell{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+    justify-content: left;
+}
+
+.indicaciones-confianza-progress{
+    flex: 1;
+    height: 12px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 30px;
+    border: none;
+    background-color: #2E3343;
+}
+
+.indicaciones-confianza-progress::-webkit-progress-bar {
+    background-color: #2E3343;
+    border-radius: 30px;
+}
+
+.indicaciones-confianza-progress::-webkit-progress-value {
+    background-color: #007BFF;
+    border-radius: 30px;
+    transition: width 0.3s ease;
+}
+
+.indicaciones-confianza-progress::-moz-progress-bar {
+    background-color: #007BFF;
+    border-radius: 30px;
+}
+.indicaciones-alt-text-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.indicaciones-alt-text{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: right;
+    border-radius: 51px;
+    padding: 2vw 2vw;
+    background: rgba(193, 160, 160, 0.08);
+    box-shadow: 18px 27px 10.7px 0 rgba(0, 0, 0, 0.25);
+}
