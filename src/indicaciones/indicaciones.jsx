@@ -1,9 +1,11 @@
-import { use } from 'react'
+import { useState } from 'react'
 import '../css/indicaciones.css'
 import { useReactTable, getCoreRowModel, flexRender } from '@tanstack/react-table'
 import data from './defectos.json'
 
 export default function Indicaciones() {
+    const [progress, setProgress] = useState(0)
+
     const columns = [
         {
             accessorKey: "tipo",
@@ -31,9 +33,48 @@ export default function Indicaciones() {
         }
     ]
     const table = useReactTable({data, columns, getCoreRowModel: getCoreRowModel()})
+
     return <section className="indicaciones-wrapper">
         <h2 className='indicaciones-title'>Indicaciones claras e intuitivas</h2>
-        <div className='indicaciones-progress-wrapper'></div>
+        <div className='indicaciones-progress-wrapper'>
+            <input
+                type="range"
+                min="0"
+                max="100"
+                value={progress}
+                onChange={(e) => setProgress(Number(e.target.value))}
+                className="indicaciones-slider"
+            />
+
+            <div className='indicaciones-text-container'>
+                <span>Antes</span>
+                <span>Después</span>
+            </div>
+
+            <div className="indicaciones-container-wrapper">
+                <div className="indicaciones-image-container">
+                    <img
+                        src="/resources/indicaciones/indicaciones sin marcar.png"
+                        className="indicaciones-image"
+                    />
+                    <div
+                        className="indicaciones-image-overlay"
+                        style={{ clipPath: `inset(0 ${100 - progress}% 0 0)` }}
+                    >
+                        <img
+                            src="/resources/indicaciones/indicaciones marcada.png"
+                            className="indicaciones-image"
+                        />
+                    </div>
+                </div>
+
+                <div
+                    className="indicaciones-divider"
+                    style={{ left: `${progress}%` }}
+                />
+            </div>
+        </div>
+
         <article className='indicaciones-defectos-wrapper'>
             <h3 className='indicaciones-subtitulo'>Defectos</h3>
             <div className='indicaciones-defectos-content'>
