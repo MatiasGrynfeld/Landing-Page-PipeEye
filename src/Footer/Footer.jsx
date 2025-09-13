@@ -1,5 +1,6 @@
-import '../css/footer.css'
-import Link from './link.jsx'
+import './Footer.css'
+import Link from './Link.jsx'
+
 export default function Footer() {
     return <footer className='footer'>
         <div className='contact-container'>

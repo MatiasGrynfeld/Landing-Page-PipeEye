@@ -1,16 +1,23 @@
 import './css/main.css';
-import Caracteristicas from './caracteristicas/caracteristicas.jsx';
-import Industrias from './industrias/industrias.jsx';
-import Indicaciones from './indicaciones/indicaciones.jsx';
-import Footer from './footer/footer.jsx';
+
+import Navbar from './Navbar/Navbar.jsx';
+import HeroSection from './HeroSection/HeroSection.jsx';
+import Caracteristicas from './Caracteristicas/Caracteristicas.jsx';
+import Funcionamiento from './Funcionamiento/Funcionamiento.jsx';
+import Indicaciones from './Indicaciones/Indicaciones.jsx';
+import Industrias from './Industrias/Industrias.jsx';
+import Asociados from './Asociados/Asociados.jsx';
+import Footer from './Footer/Footer.jsx';
 
 export default function Main() {
     return <body className='main-body'>
-        <div className='aa'></div>
+        <Navbar />
+        <HeroSection />
         <Caracteristicas />
-        <div className='bb'></div>
+        <Funcionamiento />
         <Indicaciones />
         <Industrias />
+        <Asociados />
         <Footer />
     </body>;
 }

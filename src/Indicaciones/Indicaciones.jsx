@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import '../css/indicaciones.css'
+import './Indicaciones.css'
 import { useReactTable, getCoreRowModel, flexRender } from '@tanstack/react-table'
-import data from './defectos.json'
+import data from './Defectos.json'
 
 export default function Indicaciones() {
     const [progress, setProgress] = useState(0)
