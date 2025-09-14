@@ -1,0 +1,34 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1vh 2vw;
+}
+
+
+.navbar-logo{
+    height: 16vh;
+    width: auto;
+}
+
+
+.navbar-button-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding-top: 2vh;
+}
+
+
+.navbar-button{
+    border-radius: 72.001px;
+    background: #007BFF;
+    padding: 2vh 2vw;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
