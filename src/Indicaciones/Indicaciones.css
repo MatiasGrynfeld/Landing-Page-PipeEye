@@ -54,9 +54,13 @@
     font-weight: 400;
 }
 
-.indicaciones-defectos td, .indicaciones-defectos th {
+.indicaciones-defectos td {
     padding-left: 2vw;
     padding-right: 2vw;
+}
+
+.indicaciones-defectos th{
+    padding: 1.5vh 2vw;
 }
 
 .indicaciones-defectos tbody tr:not(:last-child) {
@@ -142,6 +146,7 @@
     border-radius: 14px;
     border: none;
     outline: none;
+    position: relative;
 }
 
 .indicaciones-slider::-webkit-slider-runnable-track {
@@ -173,6 +178,8 @@
     background: #007BFF;
     border: 5px solid #000;
     cursor: pointer;
+    margin-top: -8px;
+    position: relative;
 }
 
 .indicaciones-slider::-moz-range-thumb {
@@ -182,6 +189,8 @@
     background: #007BFF;
     border: 5px solid #000;
     cursor: pointer;
+    box-sizing: border-box;
+    margin-top: -8px;
 }
 
 .indicaciones-text-container{
