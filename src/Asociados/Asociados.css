@@ -82,13 +82,11 @@
     height: 100%;
 }
 
-
 .asociados-image-lines{
     background-color: #FFF;
     width: 5vw;
     height: 2.5vh;
 }
-
 
 .asociados-empresas-wrapper{
     width: 100vw;
@@ -101,7 +99,6 @@
     padding: 2vh 0;
 }
 
-
 .asociado-empresa{
     height: auto;
     width: 15vw;
@@ -110,16 +107,13 @@
     flex-shrink: 0;
 }
 
-
 #empresa-extremo-izq{
     left: -8vw;
 }
 
-
 #empresa-izq{
     left: 14vw;
 }
-
 
 #empresa-medio{
     width: 30vw;
@@ -127,11 +121,9 @@
     left: 0;
 }
 
-
 #empresa-der{
     right: 14vw;
 }
-
 
 #empresa-extremo-der{
     right: -8vw;

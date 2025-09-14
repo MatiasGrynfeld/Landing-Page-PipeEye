@@ -8,13 +8,11 @@
     position: relative;
 }
 
-
 .funcionamiento-imagen{
     width: 100%;
     height: auto;
     object-fit: contain;
 }
-
 
 .pie{
     border-radius: 13px;
@@ -22,42 +20,35 @@
     position: absolute;
 }
 
-
 .pie-texto{
     font-weight: 700;
     font-size: 2rem;
     padding: 1vh 1vw;
 }
 
-
 #pie-1{
     top: 1vh;
     left: 9vw;
 }
-
 
 #pie-2{
     bottom: 48vh;
     left: 21vw;
 }
 
-
 #pie-3{
     bottom: 33vh;
     right: 9vw;
 }
-
 
 #pie-4{
     bottom: 5vh;
     right: 4vw;
 }
 
-
 #pie-4 .pie-texto{
     font-size: 2.5rem;
 }
-
 
 .funcionamiento-button{
     position: absolute;
@@ -70,6 +61,7 @@
     padding: 2vh 1vw;
     border: none;
 }
+
 .funcionamiento-button-imagen{
     object-fit: contain;
     width: 100%;

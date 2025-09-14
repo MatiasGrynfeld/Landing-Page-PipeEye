@@ -3,11 +3,13 @@
     flex-direction: column;
     width: 100%;
 }
+
 .industrias-title-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .industrias-title {
     font-size: 3.5rem;
     font-weight: 700;

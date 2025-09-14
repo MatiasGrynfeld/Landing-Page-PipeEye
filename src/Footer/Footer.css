@@ -11,12 +11,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 55%;
 }
 
 .contact{
     width: 100%;
-    border-radius: 40px;
+    border-radius: 30px;
     background: rgba(0, 0, 0, 0.35);
     box-shadow: 13.231px 13.231px 5.292px 0 rgba(0, 0, 0, 0.25);
     display: flex;
@@ -55,7 +55,7 @@
 
 .contact-bottom{
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 65% 35%;
     align-items: center;
     justify-content: left;
 }
@@ -63,7 +63,7 @@
 .contact-input-nombre{
     font-size: 1.5rem;
     font-weight: 400;
-    width: 50%;
+    width: 60%;
     border-radius: 40px;
     height: 3rem;
     background: rgba(0, 0, 0, 0.35);
@@ -72,6 +72,7 @@
 }
 
 .contact-button{
+    width: 100%;
     height: 3rem;
     border-radius: 40px;
     background: rgba(2, 65, 235, 0.35);

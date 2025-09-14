@@ -1,13 +1,5 @@
 .main-body{
     width: 100%;
-    background: linear-gradient(184deg, #020817 4.65%, #0045FE 28.3%, #030918 53.4%, #0145FD 78.32%, #030A1A 94%);
-    height: 700vh; /* cambiar a futuro */
-}
-
-.aa{
-    height: 100vh;
-}
-
-.bb{
-    height: 100vh;
+    background: linear-gradient(180deg, #020817 4.12%, #0045FE 29.09%, #030918 56.25%, #0145FD 83.22%, #030A1A 106.68%);
+    overflow-x: hidden;
 }

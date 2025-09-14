@@ -1,7 +1,6 @@
 import './Funcionamiento.css';
 import Pie from './Pie';
 
-
 export default function Funcionamiento() {
     return <div className='funcionamiento'>
         <img src="/resources/funcionamiento/Group 160.png" className='funcionamiento-imagen'/>
@@ -14,4 +13,3 @@ export default function Funcionamiento() {
         </button>
     </div>
 }
-

@@ -1,6 +1,5 @@
 import './HeroSection.css';
 
-
 export default function HeroSection() {
     return <div className='herosection'>
         <div className='herosection-description-container'>
@@ -19,4 +18,3 @@ export default function HeroSection() {
         </div>
     </div>
 }
-

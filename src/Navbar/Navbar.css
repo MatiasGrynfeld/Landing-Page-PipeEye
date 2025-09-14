@@ -6,12 +6,10 @@
     padding: 1vh 2vw;
 }
 
-
 .navbar-logo{
     height: 16vh;
     width: auto;
 }
-
 
 .navbar-button-container{
     display: flex;
@@ -21,7 +19,6 @@
     height: 100%;
     padding-top: 2vh;
 }
-
 
 .navbar-button{
     border-radius: 72.001px;

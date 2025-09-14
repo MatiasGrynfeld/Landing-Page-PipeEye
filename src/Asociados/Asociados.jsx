@@ -1,6 +1,5 @@
 import './Asociados.css';
 
-
 export default function Asociados() {
     return <div className='asociados'>
         <div className='asociados-title-wrapper'>
@@ -26,11 +25,11 @@ export default function Asociados() {
             </div>
         </div>
         <div className='asociados-empresas-wrapper'>
-            <img src="/public/resources/asociados/inspec group.png" className="asociado-empresa" id="empresa-extremo-izq" />
-            <img src="/public/resources/asociados/end tech.png" className="asociado-empresa" id="empresa-izq" />
-            <img src="/public/resources/asociados/enod.png" className="asociado-empresa" id='empresa-medio'/>
-            <img src="/public/resources/asociados/ndt solutions.png" className="asociado-empresa" id="empresa-der" />
-            <img src="/public/resources/asociados/ndt systems.png" className="asociado-empresa" id="empresa-extremo-der" />
+            <img src="/resources/asociados/inspec group.png" className="asociado-empresa" id="empresa-extremo-izq" />
+            <img src="/resources/asociados/end tech.png" className="asociado-empresa" id="empresa-izq" />
+            <img src="/resources/asociados/enod.png" className="asociado-empresa" id='empresa-medio'/>
+            <img src="/resources/asociados/ndt solutions.png" className="asociado-empresa" id="empresa-der" />
+            <img src="/resources/asociados/ndt systems.png" className="asociado-empresa" id="empresa-extremo-der" />
         </div>
     </div>
 }
