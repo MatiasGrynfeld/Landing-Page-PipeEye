@@ -1,5 +1,5 @@
 .asociados{
-    margin-top: 20vh;
+    margin-top: 10vh;
     margin-bottom: 30vh;
     display: flex;
     flex-direction: column;
@@ -8,7 +8,6 @@
     gap: 5vh;
 }
 
-
 .asociados-title-wrapper{
     display: flex;
     flex-direction: column;
@@ -16,7 +15,6 @@
     justify-content: center;
     width: 100%;
 }
-
 
 .asociados-main-title-container{
     display: flex;
@@ -27,13 +25,11 @@
     padding: 3vh 1vw;
 }
 
-
 .asociados-main-title{
     text-align: center;
     font-weight: 700;
     font-size: 2rem;
 }
-
 
 .asociados-image-wrapper{
     display: flex;
@@ -42,7 +38,6 @@
     justify-content: space-between;
     width: 100%;
 }
-
 
 .asociados-image-container{
     display: flex;
@@ -55,13 +50,11 @@
     flex-shrink: 0;
 }
 
-
 .asociados-image{
     height: auto;
     width: 10vw;
     object-fit: contain;
 }
-
 
 .asociados-image-lines-left-container{
     flex: 1;
@@ -71,7 +64,6 @@
     justify-content: space-evenly;
     height: 100%;
 }
-
 
 .asociados-image-lines-right-container{
     flex: 1;

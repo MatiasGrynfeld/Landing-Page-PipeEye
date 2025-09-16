@@ -2,17 +2,16 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 10vh;
 }
-
 
 .herosection-description-container{
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 .herosection-description{
     width: 60%;
@@ -20,7 +19,6 @@
     font-size: 2.5rem;
     font-weight: 700;
 }
-
 
 .herosection-bottom-wrapper{
     width: 100%;
@@ -31,7 +29,6 @@
     align-items: center;
 }
 
-
 .herosection-bottom-left{
     width: 30%;
     position: relative;
@@ -41,12 +38,10 @@
     padding: 3vh 3vw;
 }
 
-
 .herosection-bottom-left-image{
     width: 100%;
     height: auto;
 }
-
 
 .herosection-bottom-left-button{
     position: absolute;
@@ -63,11 +58,9 @@
     cursor: pointer;
 }
 
-
 .herosection-bottom-right{
     width: 30%;
 }
-
 
 .herosection-bottom-right-text{
     font-size: 2rem;

@@ -6,6 +6,7 @@
     margin-top: 10vh;
     padding: 0 3vw;
     position: relative;
+    margin-bottom: 10vh;
 }
 
 .funcionamiento-imagen{
@@ -27,23 +28,23 @@
 }
 
 #pie-1{
-    top: 1vh;
-    left: 9vw;
+    top: 1%;
+    left: 9%;
 }
 
 #pie-2{
-    bottom: 48vh;
-    left: 21vw;
+    bottom: 43%;
+    left: 25%;
 }
 
 #pie-3{
-    bottom: 33vh;
-    right: 9vw;
+    bottom: 30%;
+    right: 7%;
 }
 
 #pie-4{
-    bottom: 5vh;
-    right: 4vw;
+    bottom: 5%;
+    right: 3%;
 }
 
 #pie-4 .pie-texto{
