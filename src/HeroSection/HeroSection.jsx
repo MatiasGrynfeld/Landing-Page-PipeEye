@@ -1,6 +1,16 @@
 import './HeroSection.css';
 
 export default function HeroSection() {
+    const scrollToCaracteristicas = () => {
+        const element = document.getElementById('caracteristicas-title');
+        if (element) {
+            element.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return <div className='herosection'>
         <div className='herosection-description-container'>
             <p className='herosection-description'>IA que analiza automáticamente radiografías de tuberías para detectar, segmentar y clasificar posibles defectos.</p>
@@ -8,7 +18,7 @@ export default function HeroSection() {
         <div className='herosection-bottom-wrapper'>
             <div className='herosection-bottom-left'>
                 <img src="/resources/herosection/buttonpng.png" className='herosection-bottom-left-image'/>
-                <button className='herosection-bottom-left-button'>
+                <button className='herosection-bottom-left-button' onClick={scrollToCaracteristicas}>
                     Conocer más
                 </button>
             </div>

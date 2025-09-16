@@ -34,7 +34,7 @@ export default function Indicaciones() {
     ]
     const table = useReactTable({data, columns, getCoreRowModel: getCoreRowModel()})
 
-    return <section className="indicaciones-wrapper">
+    return <section className="indicaciones-wrapper" id='indicaciones-wrapper'>
         <h2 className='indicaciones-title'>Indicaciones claras e intuitivas</h2>
         <div className='indicaciones-progress-wrapper'>
             <input
