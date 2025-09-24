@@ -149,6 +149,7 @@
     border: none;
     outline: none;
     position: relative;
+    transition: all 0.4s ease;
 }
 
 .indicaciones-slider::-webkit-slider-runnable-track {
@@ -182,6 +183,7 @@
     cursor: pointer;
     margin-top: -8px;
     position: relative;
+    transition: all 0.4s ease;
 }
 
 .indicaciones-slider::-moz-range-thumb {
@@ -193,6 +195,7 @@
     cursor: pointer;
     box-sizing: border-box;
     margin-top: -8px;
+    transition: all 0.4s ease;
 }
 
 .indicaciones-text-container{

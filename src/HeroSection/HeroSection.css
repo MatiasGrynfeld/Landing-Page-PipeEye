@@ -56,6 +56,43 @@
     padding: 3vh 1vw;
     z-index: 2;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.button-text {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.button-arrow {
+    width: 7vh;
+    height: 7vh;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+.herosection-bottom-left-button:hover {
+    width: 12vh;
+    height: 12vh;
+}
+
+.herosection-bottom-left-button:hover .button-text {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.herosection-bottom-left-button:hover .button-arrow {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .herosection-bottom-right{

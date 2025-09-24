@@ -1,10 +1,50 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './Indicaciones.css'
 import { useReactTable, getCoreRowModel, flexRender } from '@tanstack/react-table'
 import data from './Defectos.json'
 
 export default function Indicaciones() {
     const [progress, setProgress] = useState(0)
+    const [hasAnimated, setHasAnimated] = useState(false)
+    const wrapperRef = useRef(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const [entry] = entries
+                if (entry.isIntersecting && !hasAnimated) {
+                    setHasAnimated(true)
+                    
+                    // 0 30 10 20 0
+                    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+                    const animateSlider = async () => {
+                        const waitTime = 20;
+                        await sleep(300);
+                        for (let i = 0; i <= 30; i++) {
+                            setProgress(i);
+                            await sleep(waitTime);
+                        }
+                        for (let i = 30; i >= 0; i--) {
+                            setProgress(i);
+                            await sleep(waitTime);
+                        }
+                    };
+                    animateSlider()
+                }
+            },
+            { threshold: 0.3 }
+        )
+
+        if (wrapperRef.current) {
+            observer.observe(wrapperRef.current)
+        }
+
+        return () => {
+            if (wrapperRef.current) {
+                observer.unobserve(wrapperRef.current)
+            }
+        }
+    }, [hasAnimated])
 
     const columns = [
         {
@@ -34,7 +74,7 @@ export default function Indicaciones() {
     ]
     const table = useReactTable({data, columns, getCoreRowModel: getCoreRowModel()})
 
-    return <section className="indicaciones-wrapper" id='indicaciones-wrapper'>
+    return <section className="indicaciones-wrapper" id='indicaciones-wrapper' ref={wrapperRef}>
         <h2 className='indicaciones-title'>Indicaciones claras e intuitivas</h2>
         <div className='indicaciones-progress-wrapper'>
             <input

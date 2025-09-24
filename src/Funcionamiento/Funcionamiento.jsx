@@ -19,6 +19,7 @@ export default function Funcionamiento() {
         <Pie id='pie-4'>En tan solo 3 pasos</Pie>
         <button className='funcionamiento-button' onClick={scrollToIndicaciones}>
             <img src="/resources/funcionamiento/Group 86.png" className='funcionamiento-button-imagen'/>
+            <img src="/resources/funcionamiento/Arrow.png" className='funcionamiento-button-arrow'/>
         </button>
     </div>
 }

@@ -19,7 +19,8 @@ export default function HeroSection() {
             <div className='herosection-bottom-left'>
                 <img src="/resources/herosection/buttonpng.png" className='herosection-bottom-left-image'/>
                 <button className='herosection-bottom-left-button' onClick={scrollToCaracteristicas}>
-                    Conocer más
+                    <span className='button-text'>Conocer más</span>
+                    <img src="/resources/herosection/Arrow.png" className='button-arrow'/>
                 </button>
             </div>
             <div className='herosection-bottom-right'>

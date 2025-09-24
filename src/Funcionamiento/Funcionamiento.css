@@ -61,10 +61,38 @@
     cursor: pointer;
     padding: 2vh 1vw;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .funcionamiento-button-imagen{
     object-fit: contain;
     width: 100%;
     aspect-ratio: 1 / 1;
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.3s ease;
+}
+
+.funcionamiento-button-arrow {
+    object-fit: contain;
+    width: 60%;
+    aspect-ratio: 1 / 1;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+.funcionamiento-button:hover .funcionamiento-button-imagen {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.funcionamiento-button:hover .funcionamiento-button-arrow {
+    opacity: 1;
+    transform: translateX(0);
 }
