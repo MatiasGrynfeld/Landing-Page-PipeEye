@@ -155,7 +155,7 @@
 .indicaciones-slider::-webkit-slider-runnable-track {
     height: 12px;
     border-radius: 14px;
-    background: #FFF;
+    background: linear-gradient(to right, #007BFF var(--progress, 0%), #FFF var(--progress, 0%));
     border: 3px solid #000;
 }
 

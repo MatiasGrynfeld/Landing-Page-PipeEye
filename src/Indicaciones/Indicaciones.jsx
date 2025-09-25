@@ -15,7 +15,6 @@ export default function Indicaciones() {
                 if (entry.isIntersecting && !hasAnimated) {
                     setHasAnimated(true)
                     
-                    // 0 30 10 20 0
                     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
                     const animateSlider = async () => {
                         const waitTime = 20;
@@ -84,6 +83,7 @@ export default function Indicaciones() {
                 value={progress}
                 onChange={(e) => setProgress(Number(e.target.value))}
                 className="indicaciones-slider"
+                style={{ '--progress': `${progress}%` }}
             />
 
             <div className='indicaciones-text-container'>
