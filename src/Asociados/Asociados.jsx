@@ -1,6 +1,17 @@
 import './Asociados.css';
+import Asociado from './Asociado.jsx';
 
 export default function Asociados() {
+    const images_files = [
+        "/resources/asociados/inspec group.png",
+        "/resources/asociados/end tech.png",
+        "/resources/asociados/enod.png",
+        "/resources/asociados/ndt solutions.png",
+        "/resources/asociados/ndt systems.png"
+    ];
+
+    const images = [...images_files, ...images_files];
+
     return <div className='asociados'>
         <div className='asociados-title-wrapper'>
             <div className='asociados-main-title-container'>
@@ -25,11 +36,13 @@ export default function Asociados() {
             </div>
         </div>
         <div className='asociados-empresas-wrapper'>
-            <img src="/resources/asociados/inspec group.png" className="asociado-empresa" id="empresa-extremo-izq" />
-            <img src="/resources/asociados/end tech.png" className="asociado-empresa" id="empresa-izq" />
-            <img src="/resources/asociados/enod.png" className="asociado-empresa" id='empresa-medio'/>
-            <img src="/resources/asociados/ndt solutions.png" className="asociado-empresa" id="empresa-der" />
-            <img src="/resources/asociados/ndt systems.png" className="asociado-empresa" id="empresa-extremo-der" />
+            <div className='asociados-empresas-container'>
+                {
+                    images.map((img, index) => (
+                        <Asociado key={index} img={img} />
+                    ))
+                }
+            </div>
         </div>
     </div>
 }

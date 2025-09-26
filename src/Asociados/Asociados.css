@@ -85,38 +85,30 @@
     background: rgba(0, 0, 0, 0.35);
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
+    justify-content: flex-start;
+    padding: 2vh 2vw;
     overflow: hidden;
-    padding: 2vh 0;
+}
+
+.asociados-empresas-container{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    animation: scroll 15s linear infinite;
 }
 
 .asociado-empresa{
     height: auto;
-    width: 15vw;
+    width: 30vw;
     object-fit: contain;
-    position: absolute;
     flex-shrink: 0;
 }
 
-#empresa-extremo-izq{
-    left: -8vw;
-}
-
-#empresa-izq{
-    left: 14vw;
-}
-
-#empresa-medio{
-    width: 30vw;
-    position: relative;
-    left: 0;
-}
-
-#empresa-der{
-    right: 14vw;
-}
-
-#empresa-extremo-der{
-    right: -8vw;
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-30vw * 5 - 3vw * 10)); /* -( * 5 images + 3vw * 4 gaps) = -90vw */
+    }
 }
