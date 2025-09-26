@@ -7,8 +7,9 @@
 }
 
 .navbar-logo{
-    height: 16vh;
-    width: auto;
+    height: auto;
+    width: 30vw;
+    cursor: pointer;
 }
 
 .navbar-button-container{

@@ -13,6 +13,8 @@ export default function Caracteristicas() {
     };
 
     return (
+        <>
+        <div id='caracteristicas-anchor' style={{ height: '10vh' }}></div>
         <section className='caracteristicas-wrapper'>
             <div className='caracteristicas-container'>
                 <h2 id='caracteristicas-title' className='caracteristicas-title'>Datos y Caracteristicas</h2>
@@ -33,5 +35,6 @@ export default function Caracteristicas() {
                 </div>
             </div>
         </section>
+        </>
     );
 }

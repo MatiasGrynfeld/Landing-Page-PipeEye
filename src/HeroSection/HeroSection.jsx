@@ -2,7 +2,7 @@ import './HeroSection.css';
 
 export default function HeroSection() {
     const scrollToCaracteristicas = () => {
-        const element = document.getElementById('caracteristicas-title');
+        const element = document.getElementById('caracteristicas-anchor');
         if (element) {
             element.scrollIntoView({ 
                 behavior: 'smooth',
