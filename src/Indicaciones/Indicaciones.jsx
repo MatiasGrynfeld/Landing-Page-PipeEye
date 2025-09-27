@@ -2,50 +2,35 @@ import { useState, useEffect, useRef } from 'react'
 import './Indicaciones.css'
 import { useReactTable, getCoreRowModel, flexRender } from '@tanstack/react-table'
 import data from './Defectos.json'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 
 export default function Indicaciones() {
     const [progress, setProgress] = useState(0)
     const [hasAnimated, setHasAnimated] = useState(false)
     const wrapperRef = useRef(null)
+    const isInView = useInView(wrapperRef, { once: true, threshold: 0.3 })
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const [entry] = entries
-                if (entry.isIntersecting && !hasAnimated) {
-                    setHasAnimated(true)
-                    
-                    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-                    const animateSlider = async () => {
-                        await sleep(1000);
-                        const waitTime = 20;
-                        await sleep(300);
-                        for (let i = 0; i <= 30; i++) {
-                            setProgress(i);
-                            await sleep(waitTime);
-                        }
-                        for (let i = 30; i >= 0; i--) {
-                            setProgress(i);
-                            await sleep(waitTime);
-                        }
-                    };
-                    animateSlider()
+        if (isInView && !hasAnimated) {
+            setHasAnimated(true)
+            
+            const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+            const animateSlider = async () => {
+                await sleep(1000);
+                const waitTime = 20;
+                await sleep(300);
+                for (let i = 0; i <= 30; i++) {
+                    setProgress(i);
+                    await sleep(waitTime);
                 }
-            },
-            { threshold: 0.3 }
-        )
-
-        if (wrapperRef.current) {
-            observer.observe(wrapperRef.current)
+                for (let i = 30; i >= 0; i--) {
+                    setProgress(i);
+                    await sleep(waitTime);
+                }
+            };
+            animateSlider()
         }
-
-        return () => {
-            if (wrapperRef.current) {
-                observer.unobserve(wrapperRef.current)
-            }
-        }
-    }, [hasAnimated])
+    }, [isInView, hasAnimated])
 
     const columns = [
         {
@@ -84,7 +69,7 @@ export default function Indicaciones() {
                 whiteSpace: "nowrap" 
             }}
             initial={{ width: 0 }}
-            animate={{ width: "auto" }}
+            animate={isInView ? { width: "auto" } : { width: 0 }}
             transition={{ 
                 duration: 2, 
                 ease: "easeInOut"
@@ -138,7 +123,7 @@ export default function Indicaciones() {
                 <motion.table 
                     className='indicaciones-defectos'
                     initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
                     transition={{ 
                         duration: 1, 
                         ease: "easeOut",
@@ -190,7 +175,7 @@ export default function Indicaciones() {
                     <motion.h3 
                         className='indicaciones-alt-text'
                         initial={{ opacity: 0, x: 30 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
                         transition={{ 
                             duration: 1, 
                             ease: "easeOut",

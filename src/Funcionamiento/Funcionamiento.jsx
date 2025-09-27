@@ -1,7 +1,12 @@
 import './Funcionamiento.css';
 import Pie from './Pie';
+import { useRef } from 'react';
+import { useInView } from 'framer-motion';
 
 export default function Funcionamiento() {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, threshold: 0.3 });
+
     const scrollToIndicaciones = () => {
         const element = document.getElementById('indicaciones-wrapper');
         if (element) {
@@ -12,13 +17,13 @@ export default function Funcionamiento() {
         }
     };
     
-    return <div id='funcionamiento' className='funcionamiento'>
+    return <div id='funcionamiento' className='funcionamiento' ref={ref}>
         <img src="/resources/funcionamiento/Group 160.png" className='funcionamiento-imagen'/>
         
         <Pie 
             id='pie-1'
             initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
             transition={{ duration: 1, ease: "easeOut" }}
         >
             Clickea
@@ -27,7 +32,7 @@ export default function Funcionamiento() {
         <Pie 
             id='pie-2'
             initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
             Arrastra
@@ -36,7 +41,7 @@ export default function Funcionamiento() {
         <Pie 
             id='pie-3'
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
         >
             Verifica
@@ -45,7 +50,7 @@ export default function Funcionamiento() {
         <Pie 
             id='pie-4'
             initial={{ width: 0 }}
-            animate={{ width: "auto" }}
+            animate={isInView ? { width: "auto" } : { width: 0 }}
             transition={{ duration: 2, ease: "easeInOut", delay: 1 }}
             style={{ 
                 display: "inline-block",

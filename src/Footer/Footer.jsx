@@ -1,16 +1,20 @@
 import './Footer.css'
 import Link from './Link.jsx'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 
 export default function Footer() {
-    return <footer className='footer'>
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, threshold: 0.2 });
+
+    return <footer className='footer' ref={ref}>
         <div className='contact-container'>
             <section className='contact'>
                 <div className='contact-title-container'>
                     <motion.h2 
                         className='contact-title'
                         initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         transition={{ duration: 1, ease: "easeOut" }}
                     >
                         Contactanos
@@ -19,7 +23,7 @@ export default function Footer() {
                 <motion.p 
                     className='contact-req'
                     initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                 >
                     Mail
@@ -28,13 +32,13 @@ export default function Footer() {
                     type="email" 
                     className='contact-input-mail'
                     initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
                 />
                 <motion.p 
                     className='contact-req'
                     initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
                 >
                     Nombre

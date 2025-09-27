@@ -1,8 +1,12 @@
 import './Caracteristicas.css';
 import CaracteristicasParte from './CaracteristicasParte.jsx';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 export default function Caracteristicas() {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, threshold: 0.3 });
+
     const scrollToFuncionamiento = () => {
         const element = document.getElementById('funcionamiento');
         if (element) {
@@ -16,7 +20,7 @@ export default function Caracteristicas() {
     return (
         <>
         <div id='caracteristicas-anchor' style={{ height: '10vh' }}></div>
-        <section className='caracteristicas-wrapper'>
+        <section className='caracteristicas-wrapper' ref={ref}>
             <div className='caracteristicas-container'>
                 <h2 className='caracteristicas-title'>
                     <motion.span 
@@ -26,7 +30,7 @@ export default function Caracteristicas() {
                             whiteSpace: "nowrap" 
                         }}
                         initial={{ width: 0 }}
-                        animate={{ width: "auto" }}
+                        animate={isInView ? { width: "auto" } : { width: 0 }}
                         transition={{ 
                             duration: 1, 
                             ease: "easeInOut"
@@ -38,7 +42,7 @@ export default function Caracteristicas() {
                 <div className='caracteristicas-content'>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
                     >
                         <CaracteristicasParte img="/resources/caracteristicas/caracteristica 1.svg">
@@ -47,7 +51,7 @@ export default function Caracteristicas() {
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         transition={{ duration: 1, ease: "easeOut", delay: 1.0 }}
                     >
                         <CaracteristicasParte img="/resources/caracteristicas/caracteristica 2.svg">
@@ -56,7 +60,7 @@ export default function Caracteristicas() {
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         transition={{ duration: 1, ease: "easeOut", delay: 1.2 }}
                     >
                         <CaracteristicasParte img="/resources/caracteristicas/caracteristica 3.svg">
@@ -65,7 +69,7 @@ export default function Caracteristicas() {
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         transition={{ duration: 1, ease: "easeOut", delay: 1.4 }}
                     >
                         <CaracteristicasParte img="/resources/caracteristicas/caracteristica 4.svg">

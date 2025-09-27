@@ -1,14 +1,18 @@
 import './Industrias.css'
 import IndustriasCard from './IndustriasCard.jsx'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 
 export default function Industrias() {
-    return <section className="industrias-wrapper">
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, threshold: 0.2 });
+
+    return <section className="industrias-wrapper" ref={ref}>
         <div className='industrias-title-container'>
             <motion.h2 
                 className='industrias-title'
                 initial={{ opacity: 0, y: -30 }}
-                animate={{ opacity: 1, y: 0 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
                 transition={{ 
                     duration: 1, 
                     ease: "easeOut"
@@ -20,7 +24,7 @@ export default function Industrias() {
         <div className="industrias-container">
             <motion.div
                 initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                 transition={{ 
                     duration: 1, 
                     ease: "easeOut",
@@ -33,7 +37,7 @@ export default function Industrias() {
             </motion.div>
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ 
                     duration: 1, 
                     ease: "easeOut",
@@ -46,7 +50,7 @@ export default function Industrias() {
             </motion.div>
             <motion.div
                 initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                 transition={{ 
                     duration: 1, 
                     ease: "easeOut",

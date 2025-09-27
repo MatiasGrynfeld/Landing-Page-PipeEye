@@ -1,8 +1,12 @@
 import './Asociados.css';
 import Asociado from './Asociado.jsx';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 export default function Asociados() {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, threshold: 0.2 });
+
     const images_files = [
         "/resources/asociados/inspec group.png",
         "/resources/asociados/ndt solutions.png",
@@ -13,13 +17,13 @@ export default function Asociados() {
 
     const images = [...images_files, ...images_files];
 
-    return <div className='asociados'>
+    return <div className='asociados' ref={ref}>
         <div className='asociados-title-wrapper'>
             <div className='asociados-main-title-container'>
                 <motion.h2 
                     className='asociados-main-title'
                     initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ 
                         duration: 1, 
                         ease: "easeOut"
@@ -32,7 +36,7 @@ export default function Asociados() {
                 <motion.div 
                     className='asociados-image-lines-left-container'
                     initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
                     transition={{ 
                         duration: 1, 
                         ease: "easeOut",
@@ -49,7 +53,7 @@ export default function Asociados() {
                         className='asociados-image' 
                         src="/resources/asociados/manos.png"
                         initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
+                        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                         transition={{ 
                             duration: 1, 
                             ease: "easeOut",
@@ -60,7 +64,7 @@ export default function Asociados() {
                 <motion.div 
                     className='asociados-image-lines-right-container'
                     initial={{ opacity: 0, x: 30 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
                     transition={{ 
                         duration: 1, 
                         ease: "easeOut",
