@@ -1,13 +1,14 @@
 import './Asociados.css';
 import Asociado from './Asociado.jsx';
+import { motion } from 'framer-motion';
 
 export default function Asociados() {
     const images_files = [
         "/resources/asociados/inspec group.png",
-        "/resources/asociados/end tech.png",
-        "/resources/asociados/enod.png",
         "/resources/asociados/ndt solutions.png",
-        "/resources/asociados/ndt systems.png"
+        "/resources/asociados/enod.png",
+        "/resources/asociados/ndt systems.png",
+        "/resources/asociados/end tech.png"
     ];
 
     const images = [...images_files, ...images_files];
@@ -15,24 +16,62 @@ export default function Asociados() {
     return <div className='asociados'>
         <div className='asociados-title-wrapper'>
             <div className='asociados-main-title-container'>
-                <h2 className='asociados-main-title'>Empresas que confían en nosotros</h2>
+                <motion.h2 
+                    className='asociados-main-title'
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ 
+                        duration: 1, 
+                        ease: "easeOut"
+                    }}
+                >
+                    Empresas que confían en nosotros
+                </motion.h2>
             </div>
             <div className='asociados-image-wrapper'>
-                <div className='asociados-image-lines-left-container'>
+                <motion.div 
+                    className='asociados-image-lines-left-container'
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ 
+                        duration: 1, 
+                        ease: "easeOut",
+                        delay: 0.3
+                    }}
+                >
                     <div className="asociados-image-lines"></div>
                     <div className="asociados-image-lines"></div>
                     <div className="asociados-image-lines"></div>
                     <div className="asociados-image-lines"></div>
-                </div>
+                </motion.div>
                 <div className='asociados-image-container'>
-                    <img className='asociados-image' src="/resources/asociados/manos.png"/>
+                    <motion.img 
+                        className='asociados-image' 
+                        src="/resources/asociados/manos.png"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ 
+                            duration: 1, 
+                            ease: "easeOut",
+                            delay: 0.5
+                        }}
+                    />
                 </div>
-                <div className='asociados-image-lines-right-container'>
+                <motion.div 
+                    className='asociados-image-lines-right-container'
+                    initial={{ opacity: 0, x: 30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ 
+                        duration: 1, 
+                        ease: "easeOut",
+                        delay: 0.3
+                    }}
+                >
                     <div className="asociados-image-lines"></div>
                     <div className="asociados-image-lines"></div>
                     <div className="asociados-image-lines"></div>
                     <div className="asociados-image-lines"></div>
-                </div>
+                </motion.div>
             </div>
         </div>
         <div className='asociados-empresas-wrapper'>

@@ -51,6 +51,19 @@
     box-shadow: 13.231px 13.231px 5.292px 0 rgba(0, 0, 0, 0.25);
     border: none;
     margin-bottom: 1vh;
+    padding: 0 1rem;
+    color: #FFF;
+    transition: all 0.3s ease;
+}
+
+.contact-input-mail:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.contact-input-mail:focus {
+    outline: none;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #0045FE;
 }
 
 .contact-bottom{
@@ -69,6 +82,19 @@
     background: rgba(0, 0, 0, 0.35);
     box-shadow: 13.231px 13.231px 5.292px 0 rgba(0, 0, 0, 0.25);
     border: none;
+    padding: 0 1rem;
+    color: #FFF;
+    transition: all 0.3s ease;
+}
+
+.contact-input-nombre:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.contact-input-nombre:focus {
+    outline: none;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #0045FE;
 }
 
 .contact-button{
@@ -82,6 +108,20 @@
     cursor: pointer;
     border: none;
     padding: 0 1vw;
+    transition: all 0.3s ease;
+    color: #FFF;
+}
+
+.contact-button:hover {
+    background: rgba(2, 65, 235, 0.6);
+    box-shadow: 0 0 20px rgba(0, 69, 254, 0.4);
+    transform: translateY(-2px);
+}
+
+.contact-button:active {
+    background: rgba(2, 65, 235, 0.8);
+    transform: translateY(0);
+    box-shadow: 0 0 10px rgba(0, 69, 254, 0.6);
 }
 
 .redes{
@@ -117,4 +157,18 @@
     aspect-ratio: 1/1;
     object-fit: contain;
     cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.redes-page:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 69, 254, 0.3);
+}
+
+.redes-page:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.2);
 }

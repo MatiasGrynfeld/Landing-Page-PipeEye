@@ -1,4 +1,5 @@
 import './HeroSection.css';
+import { motion } from 'framer-motion';
 
 export default function HeroSection() {
     const scrollToCaracteristicas = () => {
@@ -13,18 +14,43 @@ export default function HeroSection() {
 
     return <div className='herosection'>
         <div className='herosection-description-container'>
-            <p className='herosection-description'>IA que analiza automáticamente radiografías de tuberías para detectar, segmentar y clasificar posibles defectos.</p>
+            <motion.p 
+                className='herosection-description'
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+            >
+                IA que analiza automáticamente radiografías de tuberías para detectar, segmentar y clasificar posibles defectos.
+            </motion.p>
         </div>
         <div className='herosection-bottom-wrapper'>
-            <div className='herosection-bottom-left'>
-                <img src="/resources/herosection/buttonpng.png" className='herosection-bottom-left-image'/>
+            <motion.div 
+                className='herosection-bottom-left'
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            >
+                <motion.img 
+                    src="/resources/herosection/buttonpng.png" 
+                    className='herosection-bottom-left-image'
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                />
                 <button className='herosection-bottom-left-button' onClick={scrollToCaracteristicas}>
                     <span className='button-text'>Conocer más</span>
                     <img src="/resources/herosection/Arrow.png" className='button-arrow'/>
                 </button>
-            </div>
+            </motion.div>
             <div className='herosection-bottom-right'>
-                <p className='herosection-bottom-right-text'>Analizá soldaduras de ductos con la IA a tu lado.</p>
+                <motion.p 
+                    className='herosection-bottom-right-text'
+                    initial={{ opacity: 0, x: 30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                >
+                    Analizá soldaduras de ductos con la IA a tu lado.
+                </motion.p>
             </div>
         </div>
     </div>

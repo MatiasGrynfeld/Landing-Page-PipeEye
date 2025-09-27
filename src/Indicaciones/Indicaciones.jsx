@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import './Indicaciones.css'
 import { useReactTable, getCoreRowModel, flexRender } from '@tanstack/react-table'
 import data from './Defectos.json'
+import { motion } from 'framer-motion'
 
 export default function Indicaciones() {
     const [progress, setProgress] = useState(0)
@@ -17,6 +18,7 @@ export default function Indicaciones() {
                     
                     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
                     const animateSlider = async () => {
+                        await sleep(1000);
                         const waitTime = 20;
                         await sleep(300);
                         for (let i = 0; i <= 30; i++) {
@@ -74,7 +76,22 @@ export default function Indicaciones() {
     const table = useReactTable({data, columns, getCoreRowModel: getCoreRowModel()})
 
     return <section className="indicaciones-wrapper" id='indicaciones-wrapper' ref={wrapperRef}>
-        <h2 className='indicaciones-title'>Indicaciones claras e intuitivas</h2>
+        <motion.h2 
+            className='indicaciones-title'
+            style={{ 
+                display: "inline-block",
+                overflow: "hidden", 
+                whiteSpace: "nowrap" 
+            }}
+            initial={{ width: 0 }}
+            animate={{ width: "auto" }}
+            transition={{ 
+                duration: 2, 
+                ease: "easeInOut"
+            }}
+        >
+            Indicaciones claras e intuitivas
+        </motion.h2>
         <div className='indicaciones-progress-wrapper'>
             <input
                 type="range"
@@ -118,7 +135,16 @@ export default function Indicaciones() {
         <article className='indicaciones-defectos-wrapper'>
             <h3 className='indicaciones-subtitulo'>Defectos</h3>
             <div className='indicaciones-defectos-content'>
-                <table className='indicaciones-defectos'>
+                <motion.table 
+                    className='indicaciones-defectos'
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ 
+                        duration: 1, 
+                        ease: "easeOut",
+                        delay: 0.3
+                    }}
+                >
                     <thead className='indicaciones-defectos-header'>
                         {
                             table.getHeaderGroups().map(headerGroup => (
@@ -159,9 +185,20 @@ export default function Indicaciones() {
                             ))
                         }
                     </tbody>
-                </table>
+                </motion.table>
                 <aside className='indicaciones-alt-text-container'>
-                    <h3 className='indicaciones-alt-text'>Análisis visual con informe detallado de los resultados obtenidos.</h3>
+                    <motion.h3 
+                        className='indicaciones-alt-text'
+                        initial={{ opacity: 0, x: 30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ 
+                            duration: 1, 
+                            ease: "easeOut",
+                            delay: 0.5
+                        }}
+                    >
+                        Análisis visual con informe detallado de los resultados obtenidos.
+                    </motion.h3>
                 </aside>
             </div>
         </article>
