@@ -29,4 +29,11 @@
     font-weight: 700;
     font-size: 1rem;
     cursor: pointer;
+    transition: background 0.2s;
+}
+
+.navbar-button:hover {
+    background: rgba(2, 65, 235, 0.6);
+    box-shadow: 0 0 20px rgba(0, 69, 254, 0.4);
+    transform: translateY(-2px);
 }
